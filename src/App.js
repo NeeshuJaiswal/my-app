@@ -1,16 +1,16 @@
 //import logo from './logo.svg';
 import { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 function App() {
@@ -40,22 +40,22 @@ function App() {
   }
   return (
   <>
-  <Router>
+  {/* <Router> */}
   <Navbar title='TextUtils' aboutText='About Us' mode={mode} toggleMode={toggleMode}/>
   <Alert alert={alert}/>
   <div className="container my-3">
-  <Switch>
-        {/* /user-->compenen1
-        /user/home--> component2    react using partial matching so it's better to use exact path*/ }
-          <Route exact path="/about">
+  {/* <Switch> */}
+        {/*user-->compenen1
+  /user/home--> component2    react using partial matching so it's better to use exact path*/ }
+          {/* <Route exact path="/about">
             <About/>
           </Route>
-          <Route exact path="/">
+          <Route exact path="/"> */} 
             <Textform showAlert={showAlert} heading="Enter your text to Analyze" mode={mode}/>
-          </Route>
-  </Switch>
+          {/* </Route>
+  </Switch> */}
   </div>
-  </Router>
+  {/* </Router> */}
   </>
   );
 }
